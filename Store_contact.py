@@ -18,10 +18,14 @@ class User_credentials:
     def Account_credentials(self):
         return '{} {} {}'.format(self.Account_name, self.User_name, self.Account_password)
 
+print('Enter the Account name eg Twitter,Facebook, etc')
+Name_of_the_account = input()
 
-Name_of_the_account = input('Enter the Account name eg Twitter,Facebook, etc')
-Name_of_the_user  = input('Enter your username')
-User_password = input('Enter the accounts' 'password')
+print('Enter your username')
+Name_of_the_user  = input()
+
+print('Enter the accounts' 'password')
+User_password = input()
 
 user = User_credentials(Name_of_the_account, Name_of_the_user,User_password)
 
