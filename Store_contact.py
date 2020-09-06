@@ -1,4 +1,5 @@
 import random
+import string
 
 class User_Contact:
 
@@ -17,21 +18,23 @@ class User_credentials(object):
     def __init__(self, user_data = ''):
         self.user_data = user_data
         
-    def lengther(self):
+    def __lengther(self):
         lengths = len(self.user_data)
         if lengths > 1:
             return self.user_data
 
-    def randomer(self):
-        
-        self.alphabet = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
-        self.numbers = '1234567890'
+    def __randomer(self):
+        mix = random.randint(9999, 99999999)
+        return mix
 
-        mix = random.choices(self.alphabet,self.numbers)
-        self.user_data = mix
-        return self.user_data
+    def valid(self):
+        length = self.__lengther()
+        the_random = self.__randomer()
 
-
+        if length == True:
+            return length
+        else:
+            return the_random
 
 print('Enter the Account name eg Twitter,Facebook, etc')
 Name_of_the_account = input()
@@ -40,7 +43,9 @@ print('Enter your username')
 Name_of_the_user  = input()
 
 print('Enter the accounts' 'password')
-User_password = input()
+the_password = input()
+the_pass_auth = User_credentials(the_password)
+User_password = the_pass_auth.valid()
 
 list_of_Accounts = []
 Accounts_Dictionary = {}
