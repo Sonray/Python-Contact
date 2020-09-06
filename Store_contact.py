@@ -24,17 +24,18 @@ class User_credentials(object):
             return self.user_data
 
     def __randomer(self):
-        mix = random.randint(9999, 99999999)
+        mix = random.randint(99999, 99999999)
         return mix
 
     def valid(self):
         length = self.__lengther()
-        the_random = self.__randomer()
 
         if length == True:
             return length
         else:
+            the_random = self.__randomer()
             return the_random
+
 
 print('Enter the Account name eg Twitter,Facebook, etc')
 Name_of_the_account = input()
@@ -42,7 +43,7 @@ Name_of_the_account = input()
 print('Enter your username')
 Name_of_the_user  = input()
 
-print('Enter the accounts' 'password')
+print('Enter the accounts' 'password or leave blank to let your password be generated for you' )
 the_password = input()
 the_pass_auth = User_credentials(the_password)
 User_password = the_pass_auth.valid()
@@ -59,3 +60,21 @@ Accounts_Dictionary[Name_of_the_account] = list_of_Accounts
 print(Accounts_Dictionary)
 print(user.Account_credentials())
 
+#reset an account
+
+print('Chande account details')
+print('change Account username name')
+update_username = input()
+
+print('Change User Password')
+update_password = input()
+the_pass_auth_1 = User_credentials(update_password)
+User_password_1 = the_pass_auth.valid()
+
+Accounts_Dictionary[Name_of_the_account] = update_username
+Accounts_Dictionary[Name_of_the_account] = update_password
+
+
+
+print(Accounts_Dictionary)
+print(user.Account_credentials())
