@@ -13,28 +13,16 @@ class User_Contact:
         return '{} {} {}'.format(self.Account_name, self.User_name, self.Account_password)
 
 
-class User_credentials(object):
+class User_credentials():
 
-    def __init__(self, user_data = ''):
-        self.user_data = user_data
+    def __init__(self):
+        pass
         
-    def __lengther(self):
-        lengths = len(self.user_data)
-        if lengths > 1:
-            return self.user_data
-
-    def __randomer(self):
+    def randomer(self):
         mix = random.randint(99999, 99999999)
         return mix
 
-    def valid(self):
-        length = self.__lengther()
-
-        if length == True:
-            return length
-        else:
-            the_random = self.__randomer()
-            return the_random
+cred = User_credentials()
 
 print('Enter the Account name eg Twitter,Facebook, etc')
 Name_of_the_account = input()
@@ -44,8 +32,12 @@ Name_of_the_user  = input()
 
 print('Enter the accounts' 'password or leave blank to let your password be generated for you' )
 the_password = input()
-the_pass_auth = User_credentials(the_password)
-User_password = the_pass_auth.valid()
+
+length = len(the_password)
+if length >=1:
+    User_password = the_password
+else:
+    User_password = cred.randomer()
 
 list_of_Accounts = []
 Accounts_Dictionary = {}
@@ -67,8 +59,13 @@ update_username = input()
 
 print('Change User Password')
 update_password = input()
-the_pass_auth_1 = User_credentials(update_password)
-User_password_1 = the_pass_auth.valid()
+
+length = len(update_password)
+if length >=1:
+    User_password_1 = update_password
+else:
+    User_password_1 = cred.randomer()
+
 
 Account_string = str(Accounts_Dictionary[Name_of_the_account])
 Split_xter = Account_string.split()
