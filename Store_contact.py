@@ -36,7 +36,6 @@ class User_credentials(object):
             the_random = self.__randomer()
             return the_random
 
-
 print('Enter the Account name eg Twitter,Facebook, etc')
 Name_of_the_account = input()
 
@@ -71,10 +70,19 @@ update_password = input()
 the_pass_auth_1 = User_credentials(update_password)
 User_password_1 = the_pass_auth.valid()
 
-Accounts_Dictionary[Name_of_the_account] = update_username
-Accounts_Dictionary[Name_of_the_account] = update_password
+Account_string = str(Accounts_Dictionary[Name_of_the_account])
+Split_xter = Account_string.split()
+Split_xter[1] = update_username
+Split_xter[2] = User_password_1
 
 
+print(Account_string)
+print(Split_xter)
+
+#delete the Account
+print('Delete Account')
+
+Accounts_Dictionary.pop(str(Name_of_the_account))
 
 print(Accounts_Dictionary)
-print(user.Account_credentials())
+
