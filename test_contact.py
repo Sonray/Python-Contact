@@ -6,3 +6,4 @@ class test_units(unittest.TestCase):
     def setUp(self):
         self.account = 'Twitter'
         self.uses = 'Brother'
+        self.password = 'password'
