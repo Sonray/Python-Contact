@@ -12,5 +12,6 @@ class test_units(unittest.TestCase):
 
         #result_process_2
         user = User_Contact(self.account, self.uses,self.password)
+        user_results = user.Account_credentials()
 
-        user.Account_credentials()
+        expected_results = 'Twitter Brother password'
