@@ -7,3 +7,5 @@ class test_units(unittest.TestCase):
         self.account = 'Twitter'
         self.uses = 'Brother'
         self.password = 'password'
+
+    def test_User_Contact(self):
