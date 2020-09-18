@@ -9,3 +9,8 @@ class test_units(unittest.TestCase):
         self.password = 'password'
 
     def test_User_Contact(self):
+
+        #result_process_2
+        user = User_Contact(self.account, self.uses,self.password)
+
+        user.Account_credentials()
