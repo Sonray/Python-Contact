@@ -4,6 +4,11 @@ from Store_contact import User_credentials, User_Contact
 class test_units(unittest.TestCase):
 
     def setUp(self):
+        '''
+        this is a declaration function that makes the variables global
+        '''
+
+        #declaration_process
         self.account = 'Twitter'
         self.users = 'Brother'
         self.password = 'password'
