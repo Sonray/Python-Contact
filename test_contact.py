@@ -11,7 +11,7 @@ class test_units(unittest.TestCase):
     def test_self(self):
         pass
     
-    def test_User_Credentials(self):
+    def test_User_Credentials_returned_type(self):
         '''
         test for the user_credentials randomer function
         '''
