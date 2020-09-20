@@ -27,6 +27,9 @@ class test_units(unittest.TestCase):
         self.assertEqual(expected_results, returned_result)
 
     def test_User_Contact_returned_type(self):
+        '''
+        test for the user_credentials class
+        '''
 
 if __name__ == "__main__":
     unittest.main()
