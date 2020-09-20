@@ -30,6 +30,8 @@ class test_units(unittest.TestCase):
         '''
         test for the user_credentials class
         '''
+        #result_process_2
+        user_results = User_Contact.Account_credentials(self)
 
 if __name__ == "__main__":
     unittest.main()
