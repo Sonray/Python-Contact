@@ -9,6 +9,9 @@ class test_units(unittest.TestCase):
         self.password = 'password'
 
     def test_self(self):
+        '''
+        self test in case our tests fail we will know this works and sort for errors
+        '''
         pass
     
     def test_User_Credentials_returned_type(self):
