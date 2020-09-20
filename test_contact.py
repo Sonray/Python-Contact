@@ -15,11 +15,11 @@ class test_units(unittest.TestCase):
 
         #result_process_2
         user_results = User_credentials.randomer(self)
-
+        returned_result = int
         expected_results = type(user_results)
 
         #assert
-        self.assertEqual(expected_results, user_results)
+        self.assertEqual(expected_results, returned_result)
 
 if __name__ == "__main__":
     unittest.main()
