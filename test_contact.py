@@ -12,7 +12,9 @@ class test_units(unittest.TestCase):
         pass
     
     def test_User_Credentials(self):
-
+        '''
+        test for the user_credentials randomer function
+        '''
         #result_process_2
         user_results = User_credentials.randomer(self)
         returned_result = int
