@@ -39,6 +39,7 @@ class test_units(unittest.TestCase):
         Aserting of the results fom the result variables
         '''
         #assert
+        self.assertEqual(expected_results, returned_result)
 
 
 if __name__ == "__main__":
