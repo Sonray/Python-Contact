@@ -21,7 +21,7 @@ class test_units(unittest.TestCase):
         expected_results = type(user_results)
 
         '''
-        Aserting of the results fom the result varialbles
+        Aserting of the results fom the result variables
         '''
         #assert
         self.assertEqual(expected_results, returned_result)
@@ -36,7 +36,7 @@ class test_units(unittest.TestCase):
         expected_results = type(user_results)
 
         '''
-        Aserting of the results fom the result varialbles
+        Aserting of the results fom the result variables
         '''
         #assert
 
