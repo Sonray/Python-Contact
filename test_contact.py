@@ -33,6 +33,8 @@ class test_units(unittest.TestCase):
         #result_process_2
         user_results = User_Contact.Account_credentials(self)
         returned_result = str
+        expected_results = type(user_results)
+        
 
 if __name__ == "__main__":
     unittest.main()
