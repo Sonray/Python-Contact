@@ -34,7 +34,12 @@ class test_units(unittest.TestCase):
         user_results = User_Contact.Account_credentials(self)
         returned_result = str
         expected_results = type(user_results)
-        
+
+        '''
+        Aserting of the results fom the result varialbles
+        '''
+        #assert
+
 
 if __name__ == "__main__":
     unittest.main()
