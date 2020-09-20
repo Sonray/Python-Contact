@@ -32,7 +32,7 @@ class test_units(unittest.TestCase):
         '''
         #result_process_2
         user_results = User_Contact.Account_credentials(self)
-        returned_result = string
+        returned_result = str
 
 if __name__ == "__main__":
     unittest.main()
