@@ -5,7 +5,7 @@ class test_units(unittest.TestCase):
 
     def setUp(self):
         self.account = 'Twitter'
-        self.uses = 'Brother'
+        self.users = 'Brother'
         self.password = 'password'
 
     def test_self(self):
@@ -31,7 +31,7 @@ class test_units(unittest.TestCase):
         test for the user_credentials class
         '''
         #result_process_2
-        user_results = User_Contact.Account_credentials(self)
+        user_results = User_Contact(self.account, self.users,self.password).Account_credentials()
         returned_result = str
         expected_results = type(user_results)
 
